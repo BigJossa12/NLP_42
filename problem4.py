@@ -22,6 +22,7 @@ for i, line in enumerate(vocab):
 f = open("brown_100.txt")
 
 counts = np.zeros((len(word_index_dict),len(word_index_dict)))
+counts += 0.1
 
 # iterate through file and update counts
 for sentence in f:
@@ -48,7 +49,7 @@ print(f'p(calls | anonymous) = {answer4}')
 
 f.close()
 
-with open("bigram_probs.txt", "w") as f:
+with open("smooth_probs.txt", "w") as f:
     f.write(str(answer1) + '\n')
     f.write(str(answer2) + '\n')
     f.write(str(answer3) + '\n')
