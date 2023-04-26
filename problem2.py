@@ -30,7 +30,7 @@ for sentence in f:
         counts[word_index_dict[word]] += 1
 f.close()
 
-# print(counts)
+print(counts)
 
 # Modified in such a way that all the counts in probs sum up to 1
 probs = counts / np.sum(counts)
