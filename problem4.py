@@ -79,7 +79,7 @@ for idx, prob in enumerate(sequential_joint_probs):
     perplexity.append(1/pow(prob, 1.0/(sent_lens[idx]-1)))
 
 print(perplexity)
-with open("bigram_alpha_eval.txt", "w") as be:
+with open("smoothed_eval.txt", "w") as be:
     for p in perplexity:
         be.write(str(p) + "\n")
 
