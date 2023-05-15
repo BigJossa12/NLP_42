@@ -52,7 +52,9 @@ def train(parser, train_data, dev_data, output_path, batch_size=1024, n_epochs=1
     ###     Adam Optimizer: https://pytorch.org/docs/stable/optim.html
     ###     Cross Entropy Loss: https://pytorch.org/docs/stable/nn.html#crossentropyloss
 
+    # construct Adam optimizer TODO: optimise parameters here
     optimizer = optim.Adam(parser.model.parameters(), lr=lr)
+    # construct Cross Entropy Loss Function
     loss_func = nn.CrossEntropyLoss(reduce='mean')
 
     ### END YOUR CODE
@@ -106,11 +108,20 @@ def train_for_epoch(parser, train_data, dev_data, optimizer, loss_func, batch_si
             ### Please see the following docs for support:
             ###     Optimizer Step: https://pytorch.org/docs/stable/optim.html#optimizer-step
 
-            logits = parser.model.forward(train_x)
-            loss = loss_func(logits, train_y)
-            loss.backward()
-            optimizer.step()
+            # TODO: ask if it makes a difference to use parser.model.forward(train_x) or parser.model(train_x)
+            # in documentation of forward it says that model(train_x) calls the forward function, but why not just call model.forward(train_x) then?
 
+            # run train_x forward through model to produce logits
+            logits = parser.model.forward(train_x)
+            
+            # apply PyTorch CrossEntropyLoss function
+            loss = loss_func(logits, train_y)
+
+            # compute gradients
+            loss.backward()
+
+            # update parameters
+            optimizer.step()
 
             ### END YOUR CODE
             prog.update(1)
