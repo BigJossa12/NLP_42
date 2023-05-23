@@ -18,11 +18,11 @@ english_model_path = 'english-partut-ud-2.5-191206.udpipe'
 russian_model_path = 'russian-syntagrus-ud-2.5-191206.udpipe'
 
 # English and Russian sentences to parse
-english_sentences = ["I saw the man on the hill with a telescope.",
+english_sentences = ["He saw the cat under the tree with binoculars.",
                      "Leaving the store, the sun was shining brightly.",
                      "I have nearly finished the book.",
                      "Would you like coffee or tea and cookies?"]
-russian_sentences = ["Я видел мужчину на холме с телескопом.",
+russian_sentences = ["Он увидел кошку под деревом с биноклем.",
                      "Покидая магазин, солнце ярко светило.",
                      "Я почти закончил книгу.",
                      "Вы бы хотели кофе или чай и печенье?"]
