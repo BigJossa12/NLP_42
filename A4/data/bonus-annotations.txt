@@ -1,0 +1,88 @@
+# Prepositional Phrase Attachment Error:
+# text = He saw the cat under the tree with binoculars.
+1       He      he      PRON    PE      Gender=Masc|Number=Sing|Person=3|PronType=Prs   2       nsubj   _       _
+2       saw     see     VERB    V       Mood=Ind|Person=3|Tense=Past|VerbForm=Fin       0       root    _       _
+3       the     the     DET     RD      Definite=Def|PronType=Art       4       det     _       _
+4       cat     cat     NOUN    S       Number=Sing     2       obj     _       _
+5       under   under   ADP     E       _       7       case    _       _
+6       the     the     DET     RD      Definite=Def|PronType=Art       7       det     _       _
+7       tree    tree    NOUN    S       Number=Sing     2       obl     _       _
+8       with    with    ADP     E       _       9       case    _       _
+9       binoculars      binocular       NOUN    S       Number=Plur     7       nmod    _       SpaceAfter=No
+10      .       .       PUNCT   FS      _       2       punct   _       SpacesAfter=\n
+
+# Prepositional Phrase Attachment Error:
+# text = Он увидел кошку под деревом с биноклем.
+1       Он      он      PRON    _       Case=Nom|Gender=Masc|Number=Sing|Person=3       2       nsubj   _       _
+2       увидел  видеть  VERB    _       Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act  0       root    _       _
+3       кошку   кошка   NOUN    _       Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing    2       obj     _       _
+4       под     под     ADP     _       _       5       case    _       _
+5       деревом дерево  NOUN    _       Animacy=Inan|Case=Ins|Gender=Neut|Number=Sing   2       obl     _       _
+6       с       с       ADP     _       _       7       case    _       _
+7       биноклем        бинокль NOUN    _       Animacy=Inan|Case=Ins|Gender=Masc|Number=Sing   2       obl     _       SpaceAfter=No
+8       .       .       PUNCT   _       _       2       punct   _       SpacesAfter=\n
+
+# Verb Phrase Attachment Error:
+# text = Leaving the store, the sun was shining brightly.
+1       Leaving leave   VERB    V       VerbForm=Ger    8       advcl   _       _
+2       the     the     DET     RD      Definite=Def|PronType=Art       3       det     _       _
+3       store   store   NOUN    S       Number=Sing     1       obj     _       SpaceAfter=No
+4       ,       ,       PUNCT   FF      _       1       punct   _       _
+5       the     the     DET     RD      Definite=Def|PronType=Art       6       det     _       _
+6       sun     sun     NOUN    S       Number=Sing     8       nsubj   _       _
+7       was     be      AUX     V       Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin   8       aux     _       _
+8       shining shin    VERB    V       VerbForm=Ger    0       root    _       _
+9       brightly        brightly        ADV     B       _       8       advmod  _       SpaceAfter=No
+10      .       .       PUNCT   FS      _       8       punct   _       SpacesAfter=\n
+
+# Verb Phrase Attachment Error:
+# text = Покидая магазин, солнце ярко светило.
+1       Покидая покидать        VERB    _       Aspect=Imp|Tense=Pres|VerbForm=Conv|Voice=Act   6       advcl   _       _
+2       магазин магазин NOUN    _       Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing   1       obj     _       SpaceAfter=No
+3       ,       ,       PUNCT   _       _       1       punct   _       _
+4       солнце  солнце  NOUN    _       Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing   6       nsubj   _       _
+5       ярко    ярко    ADV     _       Degree=Pos      6       advmod  _       _
+6       светило ветить  VERB    _       Aspect=Imp|Gender=Neut|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act   0       root    _       SpaceAfter=No
+7       .       .       PUNCT   _       _       6       punct   _       SpacesAfter=\n
+
+# Modifier Attachment Error:
+# text = I have nearly finished the book.
+1       I       I       PRON    PE      Number=Sing|Person=1|PronType=Prs       4       nsubj   _       _
+2       have    have    AUX     VA      Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin   4       aux     _       _
+3       nearly  nearly  ADV     B       _       4       advmod  _       _
+4       finished        finish  VERB    V       Tense=Past|VerbForm=Part        0       root    _       _
+5       the     the     DET     RD      Definite=Def|PronType=Art       6       det     _       _
+6       book    book    NOUN    S       Number=Sing     4       obj     _       SpaceAfter=No
+7       .       .       PUNCT   FS      _       4       punct   _       SpacesAfter=\n
+
+# Modifier Attachment Error:
+# text = Я почти закончил книгу.
+1       Я       я       PRON    _       Case=Nom|Number=Sing|Person=1   3       nsubj   _       _
+2       почти   почти   ADV     _       Degree=Pos      3       advmod  _       _
+3       закончил        закончить       VERB    _       Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act  0       root    _       _
+4       книгу   книга   NOUN    _       Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing    3       obj     _       SpaceAfter=No
+5       .       .       PUNCT   _       _       3       punct   _       SpacesAfter=\n
+
+# Coordination Attachment Error:
+# text = Would you like coffee or tea and cookies?
+1       Would   will    AUX     VM      Mood=Ind|Person=3|Tense=Past|VerbForm=Fin       3       aux     _       _
+2       you     you     PRON    PE      Person=2|PronType=Prs   3       nsubj   _       _
+3       like    like    VERB    V       VerbForm=Inf    0       root    _       _
+4       coffee  coffee  NOUN    S       Number=Sing     3       obj     _       _
+5       or      or      CCONJ   CC      _       6       cc      _       _
+6       tea     tea     NOUN    S       Number=Sing     4       conj    _       _
+7       and     and     CCONJ   CC      _       8       cc      _       _
+8       cookies cooky   NOUN    S       Number=Plur     3       conj    _       SpaceAfter=No
+9       ?       ?       PUNCT   FS      _       3       punct   _       SpacesAfter=\n
+
+# Coordination Attachment Error:
+# text = Вы бы хотели кофе или чай и печенье?
+1       Вы      вы      PRON    _       Case=Nom|Number=Plur|Person=2   3       nsubj   _       _
+2       бы      бы      AUX     _       _       3       aux     _       _
+3       хотели  хотеть  VERB    _       Aspect=Imp|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act       0       root    _       _
+4       кофе    кофе    NOUN    _       Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing   3       obl     _       _
+5       или     или     CCONJ   _       _       6       cc      _       _
+6       чай     чай     NOUN    _       Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing   4       conj    _       _
+7       и       и       CCONJ   _       _       8       cc      _       _
+8       печенье печенье NOUN    _       Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing   4       conj    _       SpaceAfter=No
+9       ?       ?       PUNCT   _       _       3       punct   _       SpacesAfter=\n
